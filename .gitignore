@@ -4,3 +4,4 @@
 /public/vendor
 /.idea
 .env
+_ide_helper.php

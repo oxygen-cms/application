@@ -8,16 +8,16 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "pda/pheanstalk": "~3.0",
-        "oxygen/mod-auth": "dev-master",
-        "oxygen/mod-preferences": "dev-master",
-        "oxygen/mod-dashboard": "dev-master",
-        "oxygen/mod-pages": "dev-master",
-        "oxygen/mod-media": "dev-master",
-        "oxygen/mod-marketplace": "dev-master",
-        "oxygen/mod-security": "dev-master",
-        "oxygen/mod-import-export": "dev-master",
-        "oxygen/ui-base": "dev-master",
-        "oxygen/ui-theme": "dev-master"
+        "oxygen/mod-auth": "~0.1.0",
+        "oxygen/mod-preferences": "~0.1.0",
+        "oxygen/mod-dashboard": "~0.2.0",
+        "oxygen/mod-pages": "~0.2.0",
+        "oxygen/mod-media": "~0.1.0",
+        "oxygen/mod-marketplace": "~0.2.0",
+        "oxygen/mod-security": "~0.1.0",
+        "oxygen/mod-import-export": "~0.1.0",
+        "oxygen/ui-base": "~0.3.0",
+        "oxygen/ui-theme": "~0.2.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "dev-master",
@@ -29,76 +29,12 @@
     },
     "repositories": [
         {
-            "type": "vcs",
-            "url": "/Users/chris/Web/Oxygen/Components/laravel-doctrine"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/chris/Web/Personal/Oxygen/workbench/oxygen/composer"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/chris/Web/Oxygen/Components/core"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/chris/Web/Oxygen/Components/ui-base"
+          "type": "vcs",
+          "url": "https://github.com/oxygen-cms/laravel-doctrine"
         },
         {
           "type": "vcs",
-          "url": "/Users/chris/Web/Oxygen/Components/ui-theme"
-        },
-        {
-          "type": "vcs",
-          "url": "/Users/chris/Web/Oxygen/Components/data"
-        },
-        {
-          "type": "vcs",
-          "url": "/Users/chris/Web/Oxygen/Components/theme"
-        },
-        {
-          "type": "vcs",
-          "url": "/Users/chris/Web/Oxygen/Components/crud"
-        },
-        {
-          "type": "vcs",
-          "url": "/Users/chris/Web/Oxygen/Components/preferences"
-        },
-        {
-          "type": "vcs",
-          "url": "/Users/chris/Web/Oxygen/Components/auth"
-        },
-        {
-          "type": "vcs",
-          "url": "/Users/chris/Web/Oxygen/Components/mod-preferences"
-        },
-        {
-          "type": "vcs",
-          "url": "/Users/chris/Web/Oxygen/Components/mod-auth"
-        },
-        {
-          "type": "vcs",
-          "url": "/Users/chris/Web/Oxygen/Components/mod-dashboard"
-        },
-        {
-          "type": "vcs",
-          "url": "/Users/chris/Web/Oxygen/Components/mod-pages"
-        },
-        {
-          "type": "vcs",
-          "url": "/Users/chris/Web/Oxygen/Components/mod-media"
-        },
-        {
-          "type": "vcs",
-          "url": "/Users/chris/Web/Oxygen/Components/mod-marketplace"
-        },
-        {
-          "type": "vcs",
-          "url": "/Users/chris/Web/Oxygen/Components/mod-security"
-        },
-        {
-          "type": "vcs",
-          "url": "/Users/chris/Web/Oxygen/Components/mod-import-export"
+          "url": "https://github.com/oxygen-cms/composer"
         }
     ],
     "autoload": {
