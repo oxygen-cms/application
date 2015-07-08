@@ -1942,11 +1942,17 @@
         },
         {
             "name": "oxygen/core",
-            "version": "0.4.0",
+            "version": "0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/core.git",
-                "reference": "886e53653b99d51a701aa10f70f7e1c142535fad"
+                "reference": "b4da39ed7299dd00e61ca667ecd883122bcd15f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/core/zipball/b4da39ed7299dd00e61ca667ecd883122bcd15f5",
+                "reference": "b4da39ed7299dd00e61ca667ecd883122bcd15f5",
+                "shasum": ""
             },
             "require": {
                 "laravel/framework": "~5.1",
@@ -1994,6 +2000,7 @@
                     "src/Support/helpers.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2005,11 +2012,11 @@
             ],
             "description": "The Core Framework For Oxygen",
             "keywords": [
-                "OxygenExtension",
                 "cms",
-                "framework"
+                "framework",
+                "oxygenExtension"
             ],
-            "time": "2015-07-08 00:29:34"
+            "time": "2015-07-08 22:46:20"
         },
         {
             "name": "oxygen/crud",
