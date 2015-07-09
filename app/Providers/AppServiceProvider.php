@@ -38,7 +38,7 @@ class AppServiceProvider extends ServiceProvider
         ]);
 
         Navigation::order(Navigation::PRIMARY, [
-            'dashboard.main', '|', 'pages.getList', 'partials.getList', 'media.getList', /*, 'upcomingEvents.getList', 'emails.getList',*/ 'users.getList', 'groups.getList'
+            'dashboard.main', '|', 'pages.getList', 'partials.getList', 'media.getList', 'upcomingEvents.getList', /*, 'emails.getList',*/ 'users.getList', 'groups.getList'
         ]);
 
         Navigation::order(Navigation::SECONDARY, function() {

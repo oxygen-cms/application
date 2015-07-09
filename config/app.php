@@ -164,6 +164,7 @@ return [
         OxygenModule\Media\MediaServiceProvider::class,
         OxygenModule\Security\SecurityServiceProvider::class,
         OxygenModule\ImportExport\ImportExportServiceProvider::class,
+        OxygenModule\Events\EventsServiceProvider::class,
 
         Oxygen\UiBase\UiBaseServiceProvider::class, // must go after modules
         Oxygen\UiTheme\UiThemeServiceProvider::class,

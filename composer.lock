@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3db6323ffbd3e8f5d59208d25b1831bb",
+    "hash": "7fc4238974ddaa940726436c5a3bf285",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -67,6 +67,12 @@
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/composer.git",
                 "reference": "cc8362021a46add5503a838e9778636e27699fe8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/composer/zipball/cc8362021a46add5503a838e9778636e27699fe8",
+                "reference": "cc8362021a46add5503a838e9778636e27699fe8",
+                "shasum": ""
             },
             "require": {
                 "justinrainbow/json-schema": "~1.4",
@@ -131,7 +137,8 @@
             ],
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
-                "issues": "https://github.com/composer/composer/issues"
+                "issues": "https://github.com/composer/composer/issues",
+                "source": "https://github.com/oxygen-cms/composer/tree/master"
             },
             "time": "2015-06-04 10:10:51"
         },
@@ -1641,6 +1648,12 @@
                 "url": "https://github.com/oxygen-cms/laravel-doctrine.git",
                 "reference": "6bceaae9fe7a379c312aa0f6113e407538477460"
             },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/laravel-doctrine/zipball/6bceaae9fe7a379c312aa0f6113e407538477460",
+                "reference": "6bceaae9fe7a379c312aa0f6113e407538477460",
+                "shasum": ""
+            },
             "require": {
                 "doctrine/migrations": "1.0.*@dev",
                 "doctrine/orm": "2.5.*@dev",
@@ -1675,6 +1688,9 @@
                 "laravel",
                 "orm"
             ],
+            "support": {
+                "source": "https://github.com/oxygen-cms/laravel-doctrine/tree/master"
+            },
             "time": "2015-07-07 22:41:46"
         },
         {
@@ -1895,7 +1911,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/auth.git",
-                "reference": "534491750a005b181f2269fd60b0ca918e9c6801"
+                "reference": "633021924de09b6f2e9faa4d4e804c2391cce999"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/auth/zipball/633021924de09b6f2e9faa4d4e804c2391cce999",
+                "reference": "633021924de09b6f2e9faa4d4e804c2391cce999",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.1.0",
@@ -1923,6 +1945,7 @@
                     "Oxygen\\Auth\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1934,9 +1957,9 @@
             ],
             "description": "Authorisation Component",
             "keywords": [
-                "OxygenExtension",
                 "cms",
-                "framework"
+                "framework",
+                "oxygenExtension"
             ],
             "time": "2015-07-08 07:33:37"
         },
@@ -2024,7 +2047,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/crud.git",
-                "reference": "bc155afa4cb23bc1c8c8d34bf17b76e54ab34dc1"
+                "reference": "b5241009cec5c092f602d71637866a42eca327e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/crud/zipball/b5241009cec5c092f602d71637866a42eca327e6",
+                "reference": "b5241009cec5c092f602d71637866a42eca327e6",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.1.0",
@@ -2051,6 +2080,7 @@
                     "Oxygen\\Crud\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2062,9 +2092,9 @@
             ],
             "description": "Create, Read, Update and Delete Scaffolding for Oxygen",
             "keywords": [
-                "OxygenExtension",
                 "cms",
-                "framework"
+                "framework",
+                "oxygenExtension"
             ],
             "time": "2015-07-08 07:34:47"
         },
@@ -2074,7 +2104,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/data.git",
-                "reference": "57cb6e64b184aa40a4dab83d11aa3129f2ddc2ff"
+                "reference": "a0d4856729eabc4bff3ffa93decafa4b469a6085"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/data/zipball/a0d4856729eabc4bff3ffa93decafa4b469a6085",
+                "reference": "a0d4856729eabc4bff3ffa93decafa4b469a6085",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.1",
@@ -2106,6 +2142,7 @@
                     "Oxygen\\Data\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2117,9 +2154,9 @@
             ],
             "description": "Oxygen's Data Layer",
             "keywords": [
-                "OxygenExtension",
                 "cms",
-                "framework"
+                "framework",
+                "oxygenExtension"
             ],
             "time": "2015-07-05 01:46:45"
         },
@@ -2129,7 +2166,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/mod-auth.git",
-                "reference": "4f98af3b32cfb2c31b01442bfc04486dcf7a20ec"
+                "reference": "c01a8943bc6b8b4d22e18dd8c8853d2f09a03425"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/mod-auth/zipball/c01a8943bc6b8b4d22e18dd8c8853d2f09a03425",
+                "reference": "c01a8943bc6b8b4d22e18dd8c8853d2f09a03425",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.1.0",
@@ -2157,6 +2200,7 @@
                     "OxygenModule\\Auth\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2168,9 +2212,9 @@
             ],
             "description": "Authorisation Interface",
             "keywords": [
-                "OxygenExtension",
                 "cms",
-                "framework"
+                "framework",
+                "oxygenExtension"
             ],
             "time": "2015-07-08 10:49:17"
         },
@@ -2180,7 +2224,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/mod-dashboard.git",
-                "reference": "2d11b717c7c6a23a3f9aa3e2bf568777d0dea2b9"
+                "reference": "6a7def0a98e8965b8872b94462bac7fbc8adecc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/mod-dashboard/zipball/6a7def0a98e8965b8872b94462bac7fbc8adecc2",
+                "reference": "6a7def0a98e8965b8872b94462bac7fbc8adecc2",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.1.0",
@@ -2206,6 +2256,7 @@
                     "OxygenModule\\Dashboard\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2217,11 +2268,68 @@
             ],
             "description": "Oxygen Dashboard",
             "keywords": [
-                "OxygenExtension",
                 "cms",
-                "framework"
+                "framework",
+                "oxygenExtension"
             ],
             "time": "2015-07-08 10:51:21"
+        },
+        {
+            "name": "oxygen/mod-events",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oxygen-cms/mod-events.git",
+                "reference": "a90a8b434f90d7573290c4fc391333846642030c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/mod-events/zipball/a90a8b434f90d7573290c4fc391333846642030c",
+                "reference": "a90a8b434f90d7573290c4fc391333846642030c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.1.0",
+                "oxygen/core": "~0.4.0",
+                "oxygen/crud": "~0.2.0",
+                "oxygen/data": "~0.5.0",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "title": "Oxygen Module - Events",
+                "readme": "oxygen.md",
+                "changes": "changes.md",
+                "providers": [
+                    {
+                        "name": "Events",
+                        "class": "OxygenModule\\Events\\EventsServiceProvider",
+                        "description": "Adds the Events module"
+                    }
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "OxygenModule\\Events\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Chamberlain",
+                    "email": "c.chamberlain@iinet.net.au"
+                }
+            ],
+            "description": "Upcoming Events Module",
+            "keywords": [
+                "cms",
+                "framework",
+                "oxygenExtension"
+            ],
+            "time": "2015-07-09 05:10:50"
         },
         {
             "name": "oxygen/mod-import-export",
@@ -2229,7 +2337,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/mod-import-export.git",
-                "reference": "c4d9dd84b7436931d335610ecc953e51158df5d4"
+                "reference": "f04f8b336a51077726bb3100b3cb787a22abce36"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/mod-import-export/zipball/f04f8b336a51077726bb3100b3cb787a22abce36",
+                "reference": "f04f8b336a51077726bb3100b3cb787a22abce36",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.1.0",
@@ -2255,6 +2369,7 @@
                     "OxygenModule\\ImportExport\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2266,9 +2381,9 @@
             ],
             "description": "Import/Export Content",
             "keywords": [
-                "OxygenExtension",
                 "cms",
-                "framework"
+                "framework",
+                "oxygenExtension"
             ],
             "time": "2015-07-08 10:52:30"
         },
@@ -2338,7 +2453,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/mod-media.git",
-                "reference": "02a3890e90b35e044644a04da82788fd860077be"
+                "reference": "87d24aedafcce5edc91aa01787e6c290a4cbba6b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/mod-media/zipball/87d24aedafcce5edc91aa01787e6c290a4cbba6b",
+                "reference": "87d24aedafcce5edc91aa01787e6c290a4cbba6b",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.1.0",
@@ -2365,6 +2486,7 @@
                     "OxygenModule\\Media\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2376,9 +2498,9 @@
             ],
             "description": "Media Storage and Editing",
             "keywords": [
-                "OxygenExtension",
                 "cms",
-                "framework"
+                "framework",
+                "oxygenExtension"
             ],
             "time": "2015-07-08 10:57:50"
         },
@@ -2388,7 +2510,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/mod-pages.git",
-                "reference": "9cf515d4a5ab45dcff8b5a618fb0a3db4f10b013"
+                "reference": "efd4c27aaf78376b635f683fd48084c7f85ef20c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/mod-pages/zipball/efd4c27aaf78376b635f683fd48084c7f85ef20c",
+                "reference": "efd4c27aaf78376b635f683fd48084c7f85ef20c",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.1.0",
@@ -2417,6 +2545,7 @@
                     "OxygenModule\\Pages\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2428,9 +2557,9 @@
             ],
             "description": "Pages Module for Oxygen",
             "keywords": [
-                "OxygenExtension",
                 "cms",
-                "framework"
+                "framework",
+                "oxygenExtension"
             ],
             "time": "2015-07-08 10:57:03"
         },
@@ -2440,7 +2569,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/mod-preferences.git",
-                "reference": "98575229eda409595010801d8b3129d0b3bcf432"
+                "reference": "89552df85a1188b216d68d71ac82228338599a86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/mod-preferences/zipball/89552df85a1188b216d68d71ac82228338599a86",
+                "reference": "89552df85a1188b216d68d71ac82228338599a86",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.1.0",
@@ -2467,6 +2602,7 @@
                     "OxygenModule\\Preferences\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2478,9 +2614,9 @@
             ],
             "description": "Preferences Module for Oxygen",
             "keywords": [
-                "OxygenExtension",
                 "cms",
                 "framework",
+                "oxygenExtension",
                 "preferences"
             ],
             "time": "2015-07-08 10:55:00"
@@ -2491,7 +2627,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/mod-security.git",
-                "reference": "408866db5cc785db1fe805909a573b4ae671478b"
+                "reference": "896402eb6c59d132c97a8d19b0e4811e242a51ec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/mod-security/zipball/896402eb6c59d132c97a8d19b0e4811e242a51ec",
+                "reference": "896402eb6c59d132c97a8d19b0e4811e242a51ec",
+                "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "~5.0",
@@ -2519,6 +2661,7 @@
                     "OxygenModule\\Security\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2530,9 +2673,9 @@
             ],
             "description": "Security Utilities",
             "keywords": [
-                "OxygenExtension",
                 "cms",
-                "framework"
+                "framework",
+                "oxygenExtension"
             ],
             "time": "2015-07-08 10:53:26"
         },
@@ -2542,7 +2685,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/preferences.git",
-                "reference": "d3e040f55545ec2627eada930d6736196cbb60bf"
+                "reference": "5456502823394f2467906a2bea9a1621d96e2833"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/preferences/zipball/5456502823394f2467906a2bea9a1621d96e2833",
+                "reference": "5456502823394f2467906a2bea9a1621d96e2833",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.1.0",
@@ -2570,6 +2719,7 @@
                     "Oxygen\\Preferences\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2581,9 +2731,9 @@
             ],
             "description": "Preferences Framework for Oxygen",
             "keywords": [
-                "OxygenExtension",
                 "cms",
-                "framework"
+                "framework",
+                "oxygenExtension"
             ],
             "time": "2015-07-08 07:32:09"
         },
@@ -2593,7 +2743,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/theme.git",
-                "reference": "d1c455ea4e209faa1cf36d521f7c3909a8ce14a1"
+                "reference": "089dd0725a19b76390e357997a19dd5fd38afc40"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/theme/zipball/089dd0725a19b76390e357997a19dd5fd38afc40",
+                "reference": "089dd0725a19b76390e357997a19dd5fd38afc40",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.1.0",
@@ -2618,6 +2774,7 @@
                     "Oxygen\\Theme\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2629,9 +2786,9 @@
             ],
             "description": "Theming for Oxygen",
             "keywords": [
-                "OxygenExtension",
                 "cms",
                 "framework",
+                "oxygenExtension",
                 "theme"
             ],
             "time": "2015-07-08 05:20:15"
@@ -2705,7 +2862,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/ui-theme.git",
-                "reference": "a008413a0e796502f75392da8b7cb3d489f4f8c0"
+                "reference": "807a1c5e3c076e28b05fd74299894365a8c5c645"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/ui-theme/zipball/807a1c5e3c076e28b05fd74299894365a8c5c645",
+                "reference": "807a1c5e3c076e28b05fd74299894365a8c5c645",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.1.0",
@@ -2738,6 +2901,7 @@
                     "Oxygen\\UiTheme\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2749,9 +2913,9 @@
             ],
             "description": "Oxygen User Interface",
             "keywords": [
-                "OxygenExtension",
                 "cms",
-                "framework"
+                "framework",
+                "oxygenExtension"
             ],
             "time": "2015-07-08 11:02:00"
         },
