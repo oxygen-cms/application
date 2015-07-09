@@ -16,6 +16,7 @@
         "oxygen/mod-marketplace": "~0.2.0",
         "oxygen/mod-security": "~0.1.0",
         "oxygen/mod-import-export": "~0.1.0",
+        "oxygen/mod-events": "~0.1.0",
         "oxygen/ui-base": "~0.3.0",
         "oxygen/ui-theme": "~0.2.0"
     },
