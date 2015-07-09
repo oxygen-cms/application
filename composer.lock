@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ba70a7df55fdb68e6fdbda9bfcff436e",
+    "hash": "3db6323ffbd3e8f5d59208d25b1831bb",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1942,16 +1942,16 @@
         },
         {
             "name": "oxygen/core",
-            "version": "0.4.1",
+            "version": "0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/core.git",
-                "reference": "b4da39ed7299dd00e61ca667ecd883122bcd15f5"
+                "reference": "600dc7647652ed5d9a54742314c9ca63dd4bda65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oxygen-cms/core/zipball/b4da39ed7299dd00e61ca667ecd883122bcd15f5",
-                "reference": "b4da39ed7299dd00e61ca667ecd883122bcd15f5",
+                "url": "https://api.github.com/repos/oxygen-cms/core/zipball/600dc7647652ed5d9a54742314c9ca63dd4bda65",
+                "reference": "600dc7647652ed5d9a54742314c9ca63dd4bda65",
                 "shasum": ""
             },
             "require": {
@@ -2016,7 +2016,7 @@
                 "framework",
                 "oxygenExtension"
             ],
-            "time": "2015-07-08 22:46:20"
+            "time": "2015-07-08 23:02:07"
         },
         {
             "name": "oxygen/crud",
@@ -2631,11 +2631,17 @@
         },
         {
             "name": "oxygen/ui-base",
-            "version": "0.3.0",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/ui-base.git",
-                "reference": "4ac27fe0f209ca24d3db15e55847170d2b97831a"
+                "reference": "39d0adfcadd9dcd444a85e5ac84b35d589662126"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/ui-base/zipball/39d0adfcadd9dcd444a85e5ac84b35d589662126",
+                "reference": "39d0adfcadd9dcd444a85e5ac84b35d589662126",
+                "shasum": ""
             },
             "require": {
                 "illuminate/pagination": "~5.1",
@@ -2646,14 +2652,14 @@
             },
             "type": "library",
             "extra": {
-                "title": "Oxygen Core Views",
+                "title": "Oxygen - UI Base",
                 "readme": "oxygen.md",
                 "changes": "changes.md",
                 "icon": "icon.png",
                 "images": [
-                    "https://raw.githubusercontent.com/oxygen-cms/core-views/master/docs/buttons.png",
-                    "https://raw.githubusercontent.com/oxygen-cms/core-views/master/docs/code-view.png",
-                    "https://raw.githubusercontent.com/oxygen-cms/core-views/master/docs/design-view.png"
+                    "https://raw.githubusercontent.com/oxygen-cms/ui-base/master/docs/buttons.png",
+                    "https://raw.githubusercontent.com/oxygen-cms/ui-base/master/docs/code-view.png",
+                    "https://raw.githubusercontent.com/oxygen-cms/ui-base/master/docs/design-view.png"
                 ],
                 "providers": [
                     {
@@ -2668,6 +2674,7 @@
                     "Oxygen\\UiBase\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2679,11 +2686,11 @@
             ],
             "description": "View Files and Rendering Code",
             "keywords": [
-                "OxygenExtension",
                 "cms",
-                "framework"
+                "framework",
+                "oxygenExtension"
             ],
-            "time": "2015-07-08 11:00:10"
+            "time": "2015-07-08 23:40:44"
         },
         {
             "name": "oxygen/ui-theme",
