@@ -2274,11 +2274,17 @@
         },
         {
             "name": "oxygen/mod-marketplace",
-            "version": "0.2.0",
+            "version": "0.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/mod-marketplace.git",
-                "reference": "81ace1a576357042e297df449b6f7ecf8a01bfdd"
+                "reference": "172b6b7027966d5b961c568eb37fdbe62b94f0e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxygen-cms/mod-marketplace/zipball/172b6b7027966d5b961c568eb37fdbe62b94f0e0",
+                "reference": "172b6b7027966d5b961c568eb37fdbe62b94f0e0",
+                "shasum": ""
             },
             "require": {
                 "composer/composer": "dev-master",
@@ -2308,6 +2314,7 @@
                     "OxygenModule\\Marketplace\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2319,11 +2326,11 @@
             ],
             "description": "A Marketplace for Oxygen",
             "keywords": [
-                "OxygenExtension",
                 "cms",
-                "framework"
+                "framework",
+                "oxygenExtension"
             ],
-            "time": "2015-07-08 10:55:47"
+            "time": "2015-07-09 02:00:50"
         },
         {
             "name": "oxygen/mod-media",
