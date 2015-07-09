@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
             'image' => 'https://octobercms.com/uploads/public/53f/0b1/e89/thumb_654_828x0_0_0_auto.jpg',
             'provides' => [
                 'appearance.pages' => [
-                    'theme' => 'oxygen/pages::pages.view'
+                    'theme' => 'oxygen/mod-pages::pages.view'
                 ]
             ]
         ]);
@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
             'name' => 'Your Theme',
             'provides' => [
                 'appearance.pages' => [
-                    'theme' => 'oxygen/pages::pages.view'
+                    'theme' => 'oxygen/mod-pages::pages.view'
                 ]
             ]
         ]);
