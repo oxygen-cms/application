@@ -1382,16 +1382,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.6",
+            "version": "v5.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "356418f315e4f6bf55d2f4bd451606e45a7595df"
+                "reference": "5e942882319845f71c681ce6e85831129bf66426"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/356418f315e4f6bf55d2f4bd451606e45a7595df",
-                "reference": "356418f315e4f6bf55d2f4bd451606e45a7595df",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/5e942882319845f71c681ce6e85831129bf66426",
+                "reference": "5e942882319845f71c681ce6e85831129bf66426",
                 "shasum": ""
             },
             "require": {
@@ -1406,7 +1406,7 @@
                 "mtdowling/cron-expression": "~1.0",
                 "nesbot/carbon": "~1.19",
                 "php": ">=5.5.9",
-                "psy/psysh": "0.4.*",
+                "psy/psysh": "~0.5.1",
                 "swiftmailer/swiftmailer": "~5.1",
                 "symfony/console": "2.7.*",
                 "symfony/css-selector": "2.7.*",
@@ -1506,20 +1506,20 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-07-03 13:48:44"
+            "time": "2015-07-12 02:27:36"
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "e87d33ecc3a9fe2b1931856dc9921628f8c18cd5"
+                "reference": "b58431785768abbb4f00c10e66a065095a0693ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/e87d33ecc3a9fe2b1931856dc9921628f8c18cd5",
-                "reference": "e87d33ecc3a9fe2b1931856dc9921628f8c18cd5",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/b58431785768abbb4f00c10e66a065095a0693ef",
+                "reference": "b58431785768abbb4f00c10e66a065095a0693ef",
                 "shasum": ""
             },
             "require": {
@@ -1587,7 +1587,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2015-07-08 20:43:57"
+            "time": "2015-07-11 14:58:06"
         },
         {
             "name": "michelf/php-markdown",
@@ -2449,22 +2449,24 @@
         },
         {
             "name": "oxygen/mod-media",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/mod-media.git",
-                "reference": "87d24aedafcce5edc91aa01787e6c290a4cbba6b"
+                "reference": "6dd0acad1616ea84214816b28891053bfee82c6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oxygen-cms/mod-media/zipball/87d24aedafcce5edc91aa01787e6c290a4cbba6b",
-                "reference": "87d24aedafcce5edc91aa01787e6c290a4cbba6b",
+                "url": "https://api.github.com/repos/oxygen-cms/mod-media/zipball/6dd0acad1616ea84214816b28891053bfee82c6b",
+                "reference": "6dd0acad1616ea84214816b28891053bfee82c6b",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.1.0",
                 "intervention/image": "~2.0",
                 "oxygen/core": "~0.4.0",
+                "oxygen/crud": "~0.2.0",
+                "oxygen/data": "~0.5.0",
                 "php": ">=5.5.9"
             },
             "type": "library",
@@ -2472,7 +2474,6 @@
                 "title": "Oxygen Module - Media",
                 "readme": "oxygen.md",
                 "changes": "changes.md",
-                "icon": "icon.png",
                 "providers": [
                     {
                         "name": "Media",
@@ -2502,20 +2503,20 @@
                 "framework",
                 "oxygenExtension"
             ],
-            "time": "2015-07-08 10:57:50"
+            "time": "2015-07-09 05:11:16"
         },
         {
             "name": "oxygen/mod-pages",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/mod-pages.git",
-                "reference": "efd4c27aaf78376b635f683fd48084c7f85ef20c"
+                "reference": "56b7cc94b20e9c50e1e0771321399823bc5baeeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oxygen-cms/mod-pages/zipball/efd4c27aaf78376b635f683fd48084c7f85ef20c",
-                "reference": "efd4c27aaf78376b635f683fd48084c7f85ef20c",
+                "url": "https://api.github.com/repos/oxygen-cms/mod-pages/zipball/56b7cc94b20e9c50e1e0771321399823bc5baeeb",
+                "reference": "56b7cc94b20e9c50e1e0771321399823bc5baeeb",
                 "shasum": ""
             },
             "require": {
@@ -2561,7 +2562,7 @@
                 "framework",
                 "oxygenExtension"
             ],
-            "time": "2015-07-08 10:57:03"
+            "time": "2015-07-09 07:03:58"
         },
         {
             "name": "oxygen/mod-preferences",
@@ -2795,16 +2796,16 @@
         },
         {
             "name": "oxygen/ui-base",
-            "version": "0.3.1",
+            "version": "0.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/ui-base.git",
-                "reference": "39d0adfcadd9dcd444a85e5ac84b35d589662126"
+                "reference": "113721431bd513bfd65e8cbaca41fc8c5222919e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oxygen-cms/ui-base/zipball/39d0adfcadd9dcd444a85e5ac84b35d589662126",
-                "reference": "39d0adfcadd9dcd444a85e5ac84b35d589662126",
+                "url": "https://api.github.com/repos/oxygen-cms/ui-base/zipball/113721431bd513bfd65e8cbaca41fc8c5222919e",
+                "reference": "113721431bd513bfd65e8cbaca41fc8c5222919e",
                 "shasum": ""
             },
             "require": {
@@ -2854,20 +2855,20 @@
                 "framework",
                 "oxygenExtension"
             ],
-            "time": "2015-07-08 23:40:44"
+            "time": "2015-07-11 07:09:19"
         },
         {
             "name": "oxygen/ui-theme",
-            "version": "0.2.0",
+            "version": "0.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/ui-theme.git",
-                "reference": "807a1c5e3c076e28b05fd74299894365a8c5c645"
+                "reference": "86e91e902f6a4676b94d1b5dfb8f615a18d3cbed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oxygen-cms/ui-theme/zipball/807a1c5e3c076e28b05fd74299894365a8c5c645",
-                "reference": "807a1c5e3c076e28b05fd74299894365a8c5c645",
+                "url": "https://api.github.com/repos/oxygen-cms/ui-theme/zipball/86e91e902f6a4676b94d1b5dfb8f615a18d3cbed",
+                "reference": "86e91e902f6a4676b94d1b5dfb8f615a18d3cbed",
                 "shasum": ""
             },
             "require": {
@@ -2877,16 +2878,16 @@
             },
             "type": "library",
             "extra": {
-                "title": "Oxygen User Interface",
+                "title": "Oxygen - UI Theme",
                 "readme": "oxygen.md",
                 "changes": "changes.md",
                 "icon": "icon.png",
                 "images": [
-                    "https://raw.githubusercontent.com/oxygen-cms/ui/master/docs/login-welcome.jpg",
-                    "https://raw.githubusercontent.com/oxygen-cms/ui/master/docs/login-form.jpg",
-                    "https://raw.githubusercontent.com/oxygen-cms/ui/master/docs/pages.png",
-                    "https://raw.githubusercontent.com/oxygen-cms/ui/master/docs/marketplace.png",
-                    "https://raw.githubusercontent.com/oxygen-cms/ui/master/docs/pages-mobile.png"
+                    "https://raw.githubusercontent.com/oxygen-cms/ui-theme/master/docs/login-welcome.jpg",
+                    "https://raw.githubusercontent.com/oxygen-cms/ui-theme/master/docs/login-form.jpg",
+                    "https://raw.githubusercontent.com/oxygen-cms/ui-theme/master/docs/pages.png",
+                    "https://raw.githubusercontent.com/oxygen-cms/ui-theme/master/docs/marketplace.png",
+                    "https://raw.githubusercontent.com/oxygen-cms/ui-theme/master/docs/pages-mobile.png"
                 ],
                 "providers": [
                     {
@@ -2917,7 +2918,7 @@
                 "framework",
                 "oxygenExtension"
             ],
-            "time": "2015-07-08 11:02:00"
+            "time": "2015-07-12 05:04:09"
         },
         {
             "name": "pda/pheanstalk",
@@ -3058,24 +3059,25 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.4.4",
+            "version": "v0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "489816db71649bd95b416e3ed9062d40528ab0ac"
+                "reference": "e5a46a767928e85f1f47dda654beda8c680ddd94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/489816db71649bd95b416e3ed9062d40528ab0ac",
-                "reference": "489816db71649bd95b416e3ed9062d40528ab0ac",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/e5a46a767928e85f1f47dda654beda8c680ddd94",
+                "reference": "e5a46a767928e85f1f47dda654beda8c680ddd94",
                 "shasum": ""
             },
             "require": {
                 "dnoegel/php-xdg-base-dir": "0.1",
                 "jakub-onderka/php-console-highlighter": "0.3.*",
-                "nikic/php-parser": "~1.0",
-                "php": ">=5.3.0",
-                "symfony/console": "~2.3.10|~2.4.2|~2.5"
+                "nikic/php-parser": "^1.2.1",
+                "php": ">=5.3.9",
+                "symfony/console": "~2.3.10|^2.4.2|~3.0",
+                "symfony/var-dumper": "~2.7|~3.0"
             },
             "require-dev": {
                 "fabpot/php-cs-fixer": "~1.5",
@@ -3095,7 +3097,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-develop": "0.4.x-dev"
+                    "dev-develop": "0.6.x-dev"
                 }
             },
             "autoload": {
@@ -3125,7 +3127,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2015-03-26 18:43:54"
+            "time": "2015-07-03 16:48:00"
         },
         {
             "name": "react/promise",
@@ -5260,12 +5262,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "84c15323f51a3ce21f05a943d280c9da1226ef5c"
+                "reference": "67afe755b214bfa561ec87bba3b81b0b5cdaa69c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/84c15323f51a3ce21f05a943d280c9da1226ef5c",
-                "reference": "84c15323f51a3ce21f05a943d280c9da1226ef5c",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/67afe755b214bfa561ec87bba3b81b0b5cdaa69c",
+                "reference": "67afe755b214bfa561ec87bba3b81b0b5cdaa69c",
                 "shasum": ""
             },
             "require": {
@@ -5326,7 +5328,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2015-07-06 01:40:06"
+            "time": "2015-07-12 00:23:47"
         },
         {
             "name": "symfony/class-loader",
