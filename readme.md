@@ -18,6 +18,36 @@ To download the starter application and set up dependencies, run the following c
 
     composer create-project oxygen/application --prefer-dist
 
+After installing dependencies, you then need to set some config options. You can use [the Laravel setup guide] as a full reference,
+but the only required configuration item for basic use is the database connection.
+
+To change the database connection edit the `.env` file in the root of your installation:
+
+    DB_HOST=localhost
+    DB_DATABASE=homestead
+    DB_USERNAME=homestead
+    DB_PASSWORD=secret
+
+Then you need to update the database schema.
+
+    php artisan doctrine:schema:update
+
+For Oxygen to work it needs some core content already in the database (mainly preferences). To seed the database and to initialize any custom Oxygen extensions you may have installed, run the following:
+
+    php artisan migrate:packages
+
+Now you should be able to access the login page over at `http://yourwebsite.here/oxygen`.
+
+Finally, we need to create our first user account so we can login and start creating content. All users must be tied to a 'group' such as *Administrator* or *Editor*, so we must first create one.
+
+    php artisan make:group Administrator
+
+Then finally we can create the user. Follow the on-screen instructions and enter the require information.
+
+    php artisan make:user
+
+Congratulations, you can now ready to use Oxygen CMS!
+
 ## Official Documentation
 
 Proper documentation (and unit tests) are coming soon!
