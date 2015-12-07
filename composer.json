@@ -11,14 +11,14 @@
         "oxygen/mod-auth": "~0.1.0",
         "oxygen/mod-preferences": "~0.1.0",
         "oxygen/mod-dashboard": "~0.2.0",
-        "oxygen/mod-pages": "~0.2.0",
-        "oxygen/mod-media": "~0.1.0",
+        "oxygen/mod-pages": "dev-master",
+        "oxygen/mod-media": "~0.2.0",
         "oxygen/mod-marketplace": "~0.2.0",
         "oxygen/mod-security": "~0.1.0",
         "oxygen/mod-import-export": "~0.1.0",
         "oxygen/mod-events": "~0.1.0",
         "oxygen/ui-base": "~0.3.0",
-        "oxygen/ui-theme": "~0.2.0"
+        "oxygen/ui-theme": "~0.3.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "dev-master",
@@ -78,5 +78,5 @@
         "preferred-install": "dist"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": false
 }

@@ -131,13 +131,10 @@ return [
         Illuminate\Pipeline\PipelineServiceProvider::class,
         Illuminate\Queue\QueueServiceProvider::class,
         Illuminate\Redis\RedisServiceProvider::class,
-        Mitch\LaravelDoctrine\Passwords\PasswordResetServiceProvider::class,
         Illuminate\Session\SessionServiceProvider::class,
-        /*Illuminate\Translation\TranslationServiceProvider::class,
-        Illuminate\Validation\ValidationServiceProvider::class,
-        Illuminate\View\ViewServiceProvider::class,*/
 
-        Mitch\LaravelDoctrine\LaravelDoctrineServiceProvider::class,
+        LaravelDoctrine\ORM\DoctrineServiceProvider::class,
+        LaravelDoctrine\ORM\Auth\Passwords\PasswordResetServiceProvider::class,
 
         Oxygen\Core\Translation\TranslationServiceProvider::class, // replacement
         Oxygen\Data\Validation\Laravel\ValidationServiceProvider::class, // replacement (must be after `LaravelDoctrineServiceProvider`) to override validator
@@ -179,6 +176,7 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\ThemeServiceProvider::class
 
     ],
 
