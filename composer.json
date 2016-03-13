@@ -18,7 +18,7 @@
         "oxygen/mod-import-export": "~0.1.0",
         "oxygen/mod-events": "~0.1.0",
         "oxygen/ui-base": "~0.3.0",
-        "oxygen/ui-theme": "~0.3.0"
+        "oxygen/ui-theme": "~0.4.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "dev-master",
