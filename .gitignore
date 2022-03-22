@@ -15,7 +15,6 @@ node_modules
 /storage/sass-cache
 /storage/twig
 /.idea
-/laradock
 .env
 /.composer
 ._.DS_Store

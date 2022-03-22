@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "784fff8a71d9597d2851dd7b7151185c",
+    "content-hash": "0f77fc86feb8aef419905c610d7c7b38",
     "packages": [
         {
             "name": "austinsmorris/doctrine-dbal-datetimeutc",
@@ -3998,16 +3998,16 @@
         },
         {
             "name": "oxygen/ui-base",
-            "version": "0.7.3",
+            "version": "0.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oxygen-cms/ui-base.git",
-                "reference": "933960b3abfefef35df990933bc0e881cd856eeb"
+                "reference": "3090d589545e78eabbd0bc26324ee7fa85f68cdb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oxygen-cms/ui-base/zipball/933960b3abfefef35df990933bc0e881cd856eeb",
-                "reference": "933960b3abfefef35df990933bc0e881cd856eeb",
+                "url": "https://api.github.com/repos/oxygen-cms/ui-base/zipball/3090d589545e78eabbd0bc26324ee7fa85f68cdb",
+                "reference": "3090d589545e78eabbd0bc26324ee7fa85f68cdb",
                 "shasum": ""
             },
             "require": {
@@ -4045,9 +4045,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oxygen-cms/ui-base/issues",
-                "source": "https://github.com/oxygen-cms/ui-base/tree/0.7.3"
+                "source": "https://github.com/oxygen-cms/ui-base/tree/0.7.4"
             },
-            "time": "2022-03-20T23:39:31+00:00"
+            "time": "2022-03-21T10:32:50+00:00"
         },
         {
             "name": "oxygen/ui-theme",
@@ -10950,5 +10950,5 @@
     "platform-overrides": {
         "php": "7.4.0"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.1.0"
 }
