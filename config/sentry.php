@@ -1,10 +1,16 @@
 <?php
 
+// capture release as git sha
+if(file_exists(base_path('REVISION'))) {
+    $revision = file_get_contents(base_path('REVISION'));
+} else {
+    $revision = exec('git --git-dir ' . base_path('.git') . ' log --pretty="%h" -n1 HEAD');
+}
+
 return array(
     'dsn' => env('SENTRY_DSN'),
 
-    // capture release as git sha
-    'release' => 'oxygen@' . trim(exec('git --git-dir ' . base_path('.git') . ' log --pretty="%h" -n1 HEAD')),
+    'release' => 'oxygen@' . trim($revision),
 
     'breadcrumbs' => [
         // Capture Laravel logs in breadcrumbs
