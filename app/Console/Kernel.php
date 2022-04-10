@@ -13,7 +13,6 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        \App\Console\Commands\Inspire::class,
     ];
 
     /**
@@ -22,9 +21,10 @@ class Kernel extends ConsoleKernel
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @return void
      */
-    protected function schedule(Schedule $schedule)
-    {
-        $schedule->command('inspire')
-                 ->hourly();
+    protected function schedule(Schedule $schedule) {
+        $schedule->command('backup:make')
+            ->daily()
+            ->withoutOverlapping()
+            ->appendOutputTo(storage_path() . '/logs/autobackup.log');
     }
 }

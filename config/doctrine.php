@@ -1,36 +1,151 @@
 <?php
 
-    return [
-        'simple_annotations' => false,
-
-        'metadata' => [
-            base_path('app/')
-        ],
-
-        'proxy' => [
-            'auto_generate' => false,
-            'directory'     => '/tmp',
-            'namespace'     => null
-        ],
-
-        // Available: null, apc, xcache, redis, memcache
-        'cache_provider' => null,
-
-        'cache' => [
-            'redis' => [
-                'host'     => '127.0.0.1',
-                'port'     => 6379,
-                'database' => 1
+return [
+    /*
+    |--------------------------------------------------------------------------
+    | Entity Mangers
+    |--------------------------------------------------------------------------
+    |
+    | Configure your Entity Managers here. You can set a different connection
+    | and driver per manager and configure events and filters. Change the
+    | paths setting to the appropriate path and replace App namespace
+    | by your own namespace.
+    |
+    | Available meta drivers: annotations|yaml|xml|config|static_php
+    |
+    | Available connections: mysql|oracle|pgsql|sqlite|sqlsrv
+    | (Connections can be configured in the database config)
+    |
+    | --> Warning: Proxy auto generation should only be enabled in dev!
+    |
+    */
+    'managers'                  => [
+        'default' => [
+            'dev'        => env('APP_DEBUG'),
+            'meta'       => env('DOCTRINE_METADATA', 'annotations'),
+            'connection' => env('DB_CONNECTION', 'mysql'),
+            'namespaces' => [
+                'App'
             ],
-            'memcache' => [
-                'host' => '127.0.0.1',
-                'port' => 11211
-            ]
-        ],
+            'paths'      => [],
+            'repository' => Doctrine\ORM\EntityRepository::class,
+            'proxies'    => [
+                'namespace'     => false,
+                'path'          => storage_path('proxies'),
+                'auto_generate' => env('DOCTRINE_PROXY_AUTOGENERATE', false)
+            ],
+            /*
+            |--------------------------------------------------------------------------
+            | Doctrine events
+            |--------------------------------------------------------------------------
+            |
+            | The listener array expects the key to be a Doctrine event
+            | e.g. Doctrine\ORM\Events::onFlush
+            |
+            */
+            'events'     => [
+                'listeners'   => [],
+                'subscribers' => []
+            ],
+            'filters'    => []
+        ]
+    ],
+    /*
+    |--------------------------------------------------------------------------
+    | Doctrine Extensions
+    |--------------------------------------------------------------------------
+    |
+    | Enable/disable Doctrine Extensions by adding or removing them from the list
+    |
+    | If you want to require custom extensions you will have to require
+    | laravel-doctrine/extensions in your composer.json
+    |
+    */
+    'extensions'                => [
+        //LaravelDoctrine\ORM\Extensions\TablePrefix\TablePrefixExtension::class,
+        //LaravelDoctrine\Extensions\Timestamps\TimestampableExtension::class,
+        //LaravelDoctrine\Extensions\SoftDeletes\SoftDeleteableExtension::class,
+        //LaravelDoctrine\Extensions\Sluggable\SluggableExtension::class,
+        //LaravelDoctrine\Extensions\Sortable\SortableExtension::class,
+        //LaravelDoctrine\Extensions\Tree\TreeExtension::class,
+        //LaravelDoctrine\Extensions\Loggable\LoggableExtension::class,
+        //LaravelDoctrine\Extensions\Blameable\BlameableExtension::class,
+        //LaravelDoctrine\Extensions\IpTraceable\IpTraceableExtension::class,
+        //LaravelDoctrine\Extensions\Translatable\TranslatableExtension::class
+    ],
+    /*
+    |--------------------------------------------------------------------------
+    | Doctrine custom types
+    |--------------------------------------------------------------------------
+    */
 
-        'repository' => 'Doctrine\ORM\EntityRepository',
-
-        'repositoryFactory' => null,
-
-        'logger' => null
-    ];
+    /**
+     * this is SUPER important to handle DateTimes correctly.
+     * We assume we store and load DateTimes to/from UTC in the database.
+     * And then convert to a particular timezone later on in the user interface
+     * for display purposes.
+     */
+    'custom_types'              => [
+        'datetime' => ASM\Doctrine\DBAL\Types\DateTimeUTCType::class,
+    ],
+    /*
+    |--------------------------------------------------------------------------
+    | DQL custom datetime functions
+    |--------------------------------------------------------------------------
+    */
+    'custom_datetime_functions' => [],
+    /*
+    |--------------------------------------------------------------------------
+    | DQL custom numeric functions
+    |--------------------------------------------------------------------------
+    */
+    'custom_numeric_functions'  => [],
+    /*
+    |--------------------------------------------------------------------------
+    | DQL custom string functions
+    |--------------------------------------------------------------------------
+    */
+    'custom_string_functions'   => [],
+    /*
+    |--------------------------------------------------------------------------
+    | Enable query logging with laravel file logging,
+    | debugbar, clockwork or an own implementation.
+    | Setting it to false, will disable logging
+    |
+    | Available:
+    | - LaravelDoctrine\ORM\Loggers\LaravelDebugbarLogger
+    | - LaravelDoctrine\ORM\Loggers\ClockworkLogger
+    | - LaravelDoctrine\ORM\Loggers\FileLogger
+    |--------------------------------------------------------------------------
+    */
+    'logger'                    => env('DOCTRINE_LOGGER', false),
+    /*
+    |--------------------------------------------------------------------------
+    | Cache
+    |--------------------------------------------------------------------------
+    |
+    | Configure meta-data, query and result caching here.
+    | Optionally you can enable second level caching.
+    |
+    | Available: acp|array|file|memcached|redis|void
+    |
+    */
+    'cache'                     => [
+        'default'                => env('DOCTRINE_CACHE', 'array'),
+        'namespace'              => null,
+        'second_level'           => false,
+    ],
+    /*
+    |--------------------------------------------------------------------------
+    | Gedmo extensions
+    |--------------------------------------------------------------------------
+    |
+    | Settings for Gedmo extensions
+    | If you want to use this you will have to require
+    | laravel-doctrine/extensions in your composer.json
+    |
+    */
+    'gedmo'                     => [
+        'all_mappings' => false
+    ]
+];

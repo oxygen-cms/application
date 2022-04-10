@@ -15,6 +15,10 @@ return [
 
     'debug' => env('APP_DEBUG'),
 
+    'env' => env('APP_ENV', 'production'),
+
+    'name' => env('APP_NAME', 'Oxygen CMS'),
+
     /*
     |--------------------------------------------------------------------------
     | Application URL
@@ -26,7 +30,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost',
+    'url' => env('APP_URL', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +43,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('APP_TIMEZONE', 'UTC'),
 
     /*
     |--------------------------------------------------------------------------
@@ -84,21 +88,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Logging Configuration
-    |--------------------------------------------------------------------------
-    |
-    | Here you may configure the log settings for your application. Out of
-    | the box, Laravel uses the Monolog PHP logging library. This gives
-    | you a variety of powerful log handlers / formatters to utilize.
-    |
-    | Available Settings: "single", "daily", "syslog", "errorlog"
-    |
-    */
-
-    'log' => 'single',
-
-    /*
-    |--------------------------------------------------------------------------
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
     |
@@ -113,70 +102,43 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
-        Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
         Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
-        Illuminate\Routing\ControllerServiceProvider::class,
         Illuminate\Cookie\CookieServiceProvider::class,
-        Illuminate\Database\DatabaseServiceProvider::class, // required still for migrations
+        Illuminate\Database\DatabaseServiceProvider::class,
         Illuminate\Encryption\EncryptionServiceProvider::class,
         Illuminate\Filesystem\FilesystemServiceProvider::class,
         Illuminate\Foundation\Providers\FoundationServiceProvider::class,
         Illuminate\Hashing\HashServiceProvider::class,
         Illuminate\Mail\MailServiceProvider::class,
+        Illuminate\Notifications\NotificationServiceProvider::class,
         Illuminate\Pagination\PaginationServiceProvider::class,
         Illuminate\Pipeline\PipelineServiceProvider::class,
         Illuminate\Queue\QueueServiceProvider::class,
         Illuminate\Redis\RedisServiceProvider::class,
+        LaravelDoctrine\ORM\Auth\Passwords\PasswordResetServiceProvider::class, // replaces the Laravel service provider
         Illuminate\Session\SessionServiceProvider::class,
+        Illuminate\Validation\ValidationServiceProvider::class,
+        Oxygen\Core\Translation\TranslationServiceProvider::class,
+        Illuminate\View\ViewServiceProvider::class,
 
-        LaravelDoctrine\ORM\DoctrineServiceProvider::class,
-        LaravelDoctrine\ORM\Auth\Passwords\PasswordResetServiceProvider::class,
+        LaravelDoctrine\ORM\Queue\FailedJobsServiceProvider::class,
 
-        Oxygen\Core\Translation\TranslationServiceProvider::class, // replacement
         Oxygen\Data\Validation\Laravel\ValidationServiceProvider::class, // replacement (must be after `LaravelDoctrineServiceProvider`) to override validator
-        Oxygen\Core\View\ViewServiceProvider::class, // replacement
 
         /*
          * Oxygen Service Providers...
          */
-        Oxygen\Data\DataServiceProvider::class,
-        Oxygen\Core\CoreServiceProvider::class,
-        Oxygen\Core\Console\ConsoleServiceProvider::class,
-        Oxygen\Core\Database\DatabaseServiceProvider::class,
-        Oxygen\Core\Form\FormServiceProvider::class,
-        Oxygen\Theme\ThemeServiceProvider::class,
-        Oxygen\Crud\CrudServiceProvider::class,
-        Oxygen\Preferences\PreferencesServiceProvider::class,
-        Oxygen\Auth\AuthServiceProvider::class,
-
-        OxygenModule\Auth\AuthServiceProvider::class,
-        OxygenModule\Preferences\PreferencesServiceProvider::class,
-        OxygenModule\Dashboard\DashboardServiceProvider::class,
-        OxygenModule\Pages\PagesServiceProvider::class,
-        OxygenModule\Marketplace\MarketplaceServiceProvider::class,
-        OxygenModule\Media\MediaServiceProvider::class,
-        OxygenModule\Security\SecurityServiceProvider::class,
-        OxygenModule\ImportExport\ImportExportServiceProvider::class,
-        OxygenModule\Events\EventsServiceProvider::class,
-
-        Oxygen\UiBase\UiBaseServiceProvider::class, // must go after modules
         Oxygen\UiTheme\UiThemeServiceProvider::class,
-
-        Intervention\Image\ImageServiceProvider::class, // for `oxygen/mod-media`
-
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class, // for testing
+        Oxygen\UiBase\UiBaseServiceProvider::class, // must go after modules
 
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class
-
+        App\Providers\RouteServiceProvider::class,
     ],
 
     /*
@@ -191,7 +153,6 @@ return [
     */
 
     'aliases' => [
-
         'App'       => Illuminate\Support\Facades\App::class,
         'Artisan'   => Illuminate\Support\Facades\Artisan::class,
         'Auth'      => Illuminate\Support\Facades\Auth::class,
@@ -206,7 +167,6 @@ return [
         'Event'     => Illuminate\Support\Facades\Event::class,
         'File'      => Illuminate\Support\Facades\File::class,
         'Hash'      => Illuminate\Support\Facades\Hash::class,
-        'Input'     => Illuminate\Support\Facades\Input::class,
         'Inspiring' => Illuminate\Foundation\Inspiring::class,
         'Lang'      => Illuminate\Support\Facades\Lang::class,
         'Log'       => Illuminate\Support\Facades\Log::class,
@@ -226,11 +186,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
         'Blueprint'       => Oxygen\Core\Support\Facades\Blueprint::class,
-        'Navigation'      => Oxygen\Core\Support\Facades\Navigation::class,
-        'Theme'           => Oxygen\Theme\Facades\Theme::class,
         'Preferences'     => Oxygen\Preferences\Facades\Preferences::class,
-        'Dashboard'       => OxygenModule\Dashboard\Facades\Dashboard::class,
-        'Marketplace'     => OxygenModule\Marketplace\Facades\Marketplace::class,
 
     ],
 

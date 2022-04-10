@@ -35,6 +35,7 @@ return [
     'digits'               => 'The :attribute must be :digits digits.',
     'digits_between'       => 'The :attribute must be between :min and :max digits.',
     'email'                => 'The :attribute must be a valid email address.',
+    'ends_with' => 'The :attribute must end with one of the following: :values.',
     'filled'               => 'The :attribute field is required.',
     'exists'               => 'The selected :attribute is invalid.',
     'image'                => 'The :attribute must be an image.',
@@ -70,6 +71,7 @@ return [
         'string'  => 'The :attribute must be :size characters.',
         'array'   => 'The :attribute must contain :size items.',
     ],
+    'starts_with' => 'The :attribute must start with one of the following: :values.',
     'timezone'             => 'The :attribute must be a valid zone.',
     'unique'               => 'The :attribute has already been taken.',
     'url'                  => 'The :attribute format is invalid.',
@@ -114,14 +116,15 @@ return [
 	|
 	*/
 
-    'slug'             		=> 'The :attribute field is not a valid URL (a-Z, 0-9, /, -)',
-    'slug_extended'    		=> 'The :attribute field is not a valid URL (a-Z, 0-9, /, -, .)',
-    'slug_extended_no_dir'	=> 'The :attribute field is not a valid URL (a-Z, 0-9, -, .)',
+    'slug'             		=> 'The :attribute field is not a valid slug (a-z, 0-9, /, -)',
+    'slug_extended'    		=> 'The :attribute field is not a valid slug (a-z, 0-9, /, -, .)',
+    'slug_extended_no_dir'	=> 'The :attribute field is not a valid slug (a-z, 0-9, -, .)',
     'alpha_dot'    		    => 'The :attribute may only contain letters, numbers, and dots.',
     'name'			   		=> 'The :attribute field is not a name',
     'json'			   		=> 'The :attribute field contains malformed JSON',
     'hashes_to'             => 'The :attribute is incorrect.',
     'view_exists'           => 'The view ":view" doesn\'t exist.',
     'route_exists'          => 'The route ":route" doesn\'t exist.',
+    'twig_template'        => 'The :attribute field contains malformed code.<br><code>:exception.message</code> near line <code>:exception.line</code>'
 
 ];

@@ -3,22 +3,43 @@
 namespace App\Exceptions;
 
 use Exception;
-use Lang;
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Validation\ValidationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Response;
 use Illuminate\Session\TokenMismatchException;
-use Oxygen\Core\Http\Notification;
+use Oxygen\Auth\HandlesUnauthenticatedException;
+use Oxygen\Data\Exception\InvalidEntityException;
+use Oxygen\Preferences\UsesViewErrorPathsFromTheme;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
-class Handler extends ExceptionHandler
-{
+class Handler extends ExceptionHandler {
+
+    use UsesViewErrorPathsFromTheme;
+    use HandlesUnauthenticatedException;
+
     /**
      * A list of the exception types that should not be reported.
      *
      * @var array
      */
     protected $dontReport = [
-        \Symfony\Component\HttpKernel\Exception\HttpException::class,
+        HttpException::class,
+        TokenMismatchException::class,
+        AuthorizationException::class,
+        ModelNotFoundException::class,
+        ValidationException::class,
+        InvalidEntityException::class
+    ];
+
+    /**
+     * A list of the inputs that are never flashed for validation exceptions.
+     *
+     * @var array
+     */
+    protected $dontFlash = [
+        'password',
+        'password_confirmation',
     ];
 
     /**
@@ -26,37 +47,15 @@ class Handler extends ExceptionHandler
      *
      * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
      *
-     * @param  \Exception  $e
+     * @param Exception $e
      * @return void
+     * @throws Exception
      */
-    public function report(Exception $e)
-    {
-        return parent::report($e);
-    }
-
-    /**
-     * Render an exception into an HTTP response.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Exception  $e
-     * @return \Illuminate\Http\Response
-     */
-    public function render($request, Exception $e) {
-        if($request->wantsJson()) {
-            if(app('config')['app.debug']) {
-                $status = $this->isHttpException($e) ? $e->getStatusCode() : 500;
-                return new JsonResponse(['error' => [
-                    'type' => get_class($e),
-                    'message' => $e->getMessage(),
-                    'file' => $e->getFile(),
-                    'line' => $e->getLine()
-                ]], $status);
-            } else if ($e instanceof TokenMismatchException){
-                $notification = new Notification(Lang::get('messages.invalidCSRFToken'), Notification::WARNING);
-                return new JsonResponse($notification->toArray(), 500);
-            }
+    public function report(Exception $e) {
+        if ($this->shouldReport($e) && config('app.debug') === false && app()->bound('sentry')) {
+            app('sentry')->captureException($e);
         }
-
-        return parent::render($request, $e);
+        parent::report($e);
     }
+
 }
