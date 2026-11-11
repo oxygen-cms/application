@@ -3,11 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Contracts\Foundation\Application;
-use Mockery\Expectation;
 use Mockery\MockInterface;
 use Oxygen\Core\Preferences\Loader\Database\PreferenceItem;
 use Oxygen\Core\Preferences\Loader\PreferenceRepositoryInterface;
-use Webmozart\Assert\Assert;
 
 class BootstrapTests {
     /**
@@ -26,7 +24,6 @@ class BootstrapTests {
         $item = new PreferenceItem();
         $item->setPreferences($value);
         $e = $preferences->shouldReceive('findByKey');
-        Assert::isInstanceOf($e, Expectation::class);
         $e->with($key)->andReturn($item);
     }
 }
