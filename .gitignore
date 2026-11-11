@@ -8,7 +8,7 @@ node_modules
 /public/img
 /public/favicon.ico
 /public/external-resources
-/public/vendor
+/public/vendor/oxygen/ui-theme
 /public/deploy
 /storage/backups
 /storage/marketplace
@@ -18,3 +18,5 @@ node_modules
 .env
 /.composer
 ._.DS_Store
+/storage/database.sqlite
+/storage/database.sqlite-journal

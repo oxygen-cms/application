@@ -4,20 +4,10 @@ namespace App\Providers;
 
 use App\Http\Controllers\AdminController;
 use Illuminate\Routing\Router;
-use Oxygen\Core\Contracts\Routing\BlueprintRegistrar;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
-use Oxygen\Core\Blueprint\BlueprintManager;
+use OxygenModule\Pages\Controller\PagesController;
 
 class RouteServiceProvider extends ServiceProvider {
-    /**
-     * This namespace is applied to the controller routes in your routes file.
-     *
-     * In addition, it is set as the URL generator's root namespace.
-     *
-     * @var string
-     */
-    protected $namespace = 'App\Http\Controllers';
-
     /**
      * The path to the "home" route for your application.
      *
@@ -37,12 +27,8 @@ class RouteServiceProvider extends ServiceProvider {
      * Define the routes for the application.
      *
      * @param Router $router
-     * @param BlueprintRegistrar $registrar
-     * @param BlueprintManager $manager
      */
-    public function map(Router $router, BlueprintRegistrar $registrar, BlueprintManager $manager) {
-        $manager->registerRoutes($registrar);
-
+    public function map(Router $router): void {
         $router->prefix('/oxygen')
             ->middleware(['web'])
             ->group(function(Router $router) {
@@ -62,6 +48,9 @@ class RouteServiceProvider extends ServiceProvider {
                     ->name('spa');
             });
 
-        $manager->registerFinalRoutes($registrar);
+        // Page catch-all route — must be registered LAST
+        $router->get('/{slug?}', [PagesController::class, 'getView'])
+            ->where('slug', '([a-z0-9/\-]+)')
+            ->middleware(['public']);
     }
 }

@@ -10,7 +10,7 @@ class AdminController {
     /**
      * @throws FileNotFoundException
      */
-    public function getView(Filesystem $filesystem) {
+    public function getView(Filesystem $filesystem): string {
         return $filesystem->get(public_path('/vendor/oxygen/index.html'));
     }
 

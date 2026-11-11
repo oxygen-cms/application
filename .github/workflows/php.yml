@@ -12,14 +12,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Validate composer.json and composer.lock
       run: composer validate
 
     - name: Cache Composer packages
       id: composer-cache
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: vendor
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
@@ -29,19 +29,27 @@ jobs:
     - name: Setup PHP versions
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '7.4'
+        php-version: '8.3'
 
-    - name: Copy example env file
-      run: cp .env.example .env
+    - name: Copy testing env file
+      run: cp .env.testing .env
 
     - name: Install dependencies
-      env:
-        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       if: steps.composer-cache.outputs.cache-hit != 'true'
-      run: composer install --prefer-dist --no-progress --no-suggest
+      run: composer install --prefer-dist --no-progress
 
     - name: Generate app key
-      run: php artisan key:generate
+      run: php artisan key:generate --env=testing
+
+    - name: Create storage directories
+      run: |
+        mkdir -p storage/proxies
+        mkdir -p storage/framework/{cache,sessions,views}
+        touch storage/database.sqlite
+        chmod -R 777 storage
+
+    - name: Generate Doctrine proxies
+      run: php artisan doctrine:generate:proxies --env=testing
 
     - name: Run test suite
       run: composer run-script test

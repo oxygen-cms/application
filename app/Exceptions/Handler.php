@@ -2,7 +2,7 @@
 
 namespace App\Exceptions;
 
-use Exception;
+use Throwable;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Validation\ValidationException;
@@ -10,7 +10,7 @@ use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Session\TokenMismatchException;
 use Oxygen\Auth\HandlesUnauthenticatedException;
 use Oxygen\Data\Exception\InvalidEntityException;
-use Oxygen\Preferences\UsesViewErrorPathsFromTheme;
+use Oxygen\Core\Preferences\UsesViewErrorPathsFromTheme;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class Handler extends ExceptionHandler {
@@ -21,7 +21,7 @@ class Handler extends ExceptionHandler {
     /**
      * A list of the exception types that should not be reported.
      *
-     * @var array
+     * @var array<int, class-string<Throwable>>
      */
     protected $dontReport = [
         HttpException::class,
@@ -35,7 +35,7 @@ class Handler extends ExceptionHandler {
     /**
      * A list of the inputs that are never flashed for validation exceptions.
      *
-     * @var array
+     * @var array<int, string>
      */
     protected $dontFlash = [
         'password',
@@ -47,11 +47,11 @@ class Handler extends ExceptionHandler {
      *
      * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
      *
-     * @param Exception $e
+     * @param Throwable $e
      * @return void
-     * @throws Exception
+     * @throws Throwable
      */
-    public function report(Exception $e) {
+    public function report(Throwable $e): void {
         if ($this->shouldReport($e) && config('app.debug') === false && app()->bound('sentry')) {
             app('sentry')->captureException($e);
         }
