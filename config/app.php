@@ -130,15 +130,10 @@ return [
         Oxygen\Data\Validation\Laravel\ValidationServiceProvider::class, // replacement (must be after `LaravelDoctrineServiceProvider`) to override validator
 
         /*
-         * Oxygen Service Providers...
-         */
-        Oxygen\UiTheme\UiThemeServiceProvider::class,
-        Oxygen\UiBase\UiBaseServiceProvider::class, // must go after modules
-
-        /*
          * Application Service Providers...
          */
         App\Providers\RouteServiceProvider::class,
+        App\Providers\DoctrineSchemaServiceProvider::class,
     ],
 
     /*
@@ -184,9 +179,6 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-
-        'Blueprint'       => Oxygen\Core\Support\Facades\Blueprint::class,
-        'Preferences'     => Oxygen\Preferences\Facades\Preferences::class,
 
     ],
 

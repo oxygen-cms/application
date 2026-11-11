@@ -2,18 +2,19 @@
 
 namespace Tests\Feature;
 
-use Oxygen\Preferences\Loader\Database\PreferenceItem;
+use Exception;
+use Oxygen\Core\Preferences\Loader\Database\PreferenceItem;
 use OxygenModule\Pages\Entity\Page;
 use OxygenModule\Pages\Repository\PageRepositoryInterface;
 use Tests\TestCase;
-use Oxygen\Preferences\Loader\Database\DoctrinePreferenceRepository;
+use Oxygen\Core\Preferences\Loader\Database\DoctrinePreferenceRepository;
 
 class HomePageTest extends TestCase {
     /**
      * A basic functional test example.
      *
      * @return void
-     * @throws \Exception
+     * @throws Exception
      */
     public function testBasicExample() {
         $pages = \Mockery::mock(PageRepositoryInterface::class);

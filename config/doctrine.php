@@ -11,7 +11,7 @@ return [
     | paths setting to the appropriate path and replace App namespace
     | by your own namespace.
     |
-    | Available meta drivers: annotations|yaml|xml|config|static_php
+    | Available meta drivers: attributes|yaml|xml|config|static_php
     |
     | Available connections: mysql|oracle|pgsql|sqlite|sqlsrv
     | (Connections can be configured in the database config)
@@ -22,7 +22,7 @@ return [
     'managers'                  => [
         'default' => [
             'dev'        => env('APP_DEBUG'),
-            'meta'       => env('DOCTRINE_METADATA', 'annotations'),
+            'meta'       => env('DOCTRINE_METADATA', 'attributes'),
             'connection' => env('DB_CONNECTION', 'mysql'),
             'namespaces' => [
                 'App'
@@ -30,7 +30,7 @@ return [
             'paths'      => [],
             'repository' => Doctrine\ORM\EntityRepository::class,
             'proxies'    => [
-                'namespace'     => false,
+                'namespace'     => 'OxygenProxies',
                 'path'          => storage_path('proxies'),
                 'auto_generate' => env('DOCTRINE_PROXY_AUTOGENERATE', false)
             ],
@@ -86,7 +86,8 @@ return [
      * for display purposes.
      */
     'custom_types'              => [
-        'datetime' => ASM\Doctrine\DBAL\Types\DateTimeUTCType::class,
+        'datetime' => Shapecode\Doctrine\DBAL\Types\DateTimeUTCType::class,
+        'datetimeutc' => Shapecode\Doctrine\DBAL\Types\DateTimeUTCType::class,
     ],
     /*
     |--------------------------------------------------------------------------
@@ -130,10 +131,22 @@ return [
     | Available: acp|array|file|memcached|redis|void
     |
     */
-    'cache'                     => [
-        'default'                => env('DOCTRINE_CACHE', 'array'),
-        'namespace'              => null,
-        'second_level'           => false,
+    'cache' => [
+        'second_level'     => false,
+        'default'          => env('DOCTRINE_CACHE', 'array'),
+        'namespace'        => null,
+        'metadata'         => [
+            'driver'       => env('DOCTRINE_METADATA_CACHE', env('DOCTRINE_CACHE', 'array')),
+            'namespace'    => 'metadata',
+        ],
+        'query'            => [
+            'driver'       => env('DOCTRINE_QUERY_CACHE', env('DOCTRINE_CACHE', 'array')),
+            'namespace'    => 'query',
+        ],
+        'result'           => [
+            'driver'       => env('DOCTRINE_RESULT_CACHE', env('DOCTRINE_CACHE', 'array')),
+            'namespace'    => 'result',
+        ],
     ],
     /*
     |--------------------------------------------------------------------------
